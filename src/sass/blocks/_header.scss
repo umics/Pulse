@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+    .header__logo {
+        width: 250px;
+        img {
+            width: 100%;
+        }
+    }   
+    .header__official {
+        font-weight: 500;
+        font-size: 12px;
+        color: #FFFFFF;
+        text-align: center;
+    }
+        span {
+            display: block;
+            font-weight: 500;
+            font-size: 18px;
+            color: #FFFFFF;
+        }
+    .header__phone {
+        font-weight: 700;
+        font-size: 18px;
+        color: #FFFFFF;
+    }
+    .button {
+        font-weight: 500;
+        font-size: 12px;
+        color: #FFFFFF;
+        
+        width: 153px;
+        height: 32px;
+        
+
+        background: #C70101;
+        border-radius: 5px;
+    }
