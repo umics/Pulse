@@ -3,7 +3,7 @@
     min-height: 650px;
     padding: 21px 0 93px 0;
     background: url(../../img/main.jpg) center (center/cover) no-repeat;  
-
+    
     &__wrapper {
         display: flex;
         flex-direction: column;
@@ -44,5 +44,16 @@
         color: #FFFFFF;
         margin-top: 20px;
         text-align: center;
+    }
+    &__link {
+        margin-top: 18px;
+        font-weight: 500;
+        font-size: 16px;
+        color: #FFFFFF;
+        a{
+            text-transform: uppercase;
+            text-decoration: underline;
+            color: #FFFFFF;
+        }
     }
 }    
