@@ -1,0 +1,28 @@
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 767px) {
+    .header {
+        padding: 0 10px;
+    }
+    .promo__header {
+        padding-right: 20px;
+    }
+    .promo__subheader { 
+        padding-right: 20px;
+    }
+    .promo__icons{
+        padding-right: 20px;
+    }
+    button.button_main{
+           width: 227px; 
+           margin-right: 20px;
+    }
+    .promo__link {
+        margin-right: 20px;
+    }
+    .benefits__items {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

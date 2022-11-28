@@ -1,13 +1,8 @@
 .button {
-    
     text-transform: uppercase;
-
     font-weight: 500;
     font-size: 12px;
-
-
     color: #FFFFFF;
-
     width: 153px;
     height: 32px;
     background: $main-color;
@@ -33,5 +28,12 @@
         font-size: 16px;
         text-transform: uppercase;
         color: #FFFFFF;
+    }
+    &_mini {
+        font-size: 14px;
+        width: 135px;
+        height: 44px;
+        background: #C70101;
+        
     }
     }
