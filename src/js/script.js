@@ -7,11 +7,14 @@ $(document).ready(function(){
         {
           breakpoint: 768,
           settings: {
-            dots: true,
-            arrows: false
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3
           }
-        }
+        },
       ]
+      
     });
 
     $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {

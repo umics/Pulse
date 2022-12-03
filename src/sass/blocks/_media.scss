@@ -1,5 +1,8 @@
-@media (max-width: 1200px) {
-
+@media (max-width: 1200px){} 
+@media (max-width: 991px) {
+    .carousel {
+        width: 100%;
+    }
 }
 @media (max-width: 767px) {
     .header {
@@ -24,5 +27,24 @@
     .benefits__items {
         display: flex;
         flex-wrap: wrap;
+    }
+    .title.title_left {
+        padding: 0 60px;
+        font-size: 30px;
+    }
+    .consultation__descr {
+        padding: 0 60px;
+        font-size: 18px;
+    }
+    .feed-form {
+        transform: translateX(60px);
+    }
+    .carousel {
+        width: 100%;
+    }
+}
+@media (max-width: 320px) {
+    .carousel {
+        width: 100%;
     }
 }
