@@ -5,16 +5,13 @@ $(document).ready(function(){
       nextArrow: '<button type="button" class="slick-next"><img src="../icons/right.svg"></button>',
       responsive: [
         {
-          breakpoint: 768,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 3
-          }
-        },
-      ]
-      
+            breakpoint: 992,
+            settings: {
+                dots: true,
+                arrows: false
+            }
+        }
+    ]
     });
 
     $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
@@ -37,4 +34,63 @@ $(document).ready(function(){
           $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
       })
   })
+
+
+  // Modal
+
+  $('[data-modal=consultation]').on('click', function() {
+    $('.overlay, #consultation').fadeIn('slow');
+});
+$('.modal__close').on('click', function() {
+    $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+});
+
+$('.button_mini').each(function(i) {
+    $(this).on('click', function() {
+        $('#order .modal__description').text($('.catalog-item__subtitle').eq(i).text());
+        $('.overlay, #order').fadeIn('slow');
+    })
   });
+
+// Оптимизация валидации форм
+
+  function valideForms(form) {
+    $(form).validate({
+      rules: {
+        name: {
+          required: true,
+          minlength: 2
+        },
+        phone: "required",
+        email: {
+          required: true,
+          email: true
+        }
+      },
+      messages: {
+        name: {
+          required: "Пожалуйста, введите своё имя",
+          minlength: jQuery.validator.format("Введите {0} символа!")
+        },
+        email: {
+          required: "Пожалуйста, введите свой почтовый адресс",
+          email: "Неправильно введён адресс почты. Пожалуйста, введите её в формате name@domain.com"
+        },
+        phone: "Пожалуйста, введите свой номер телефона"
+      }
+    });
+  };
+
+// Один раз прописали форму сверху и снизу присваеваем её всем необходимым формам 
+
+  valideForms('#consultation-form');
+  valideForms('#consultation form');
+  valideForms('#order form');
+
+// Устанавливаем маску ввода номера  
+
+  $("input[name=phone]").mask("+7 (999) 999-99-99");
+  
+});
+
+   
