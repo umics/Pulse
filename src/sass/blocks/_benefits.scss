@@ -63,6 +63,17 @@
         color: #FF0000;
     }
 
+    .benefits_animated {
+        animation-name: heartbeat;
+        animation-duration: 0.8s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        &:hover {
+            animation-play-state: paused;
+        }
+        animation-delay: 2s;
+    }
+
 
     
 }
